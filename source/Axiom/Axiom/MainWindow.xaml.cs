@@ -1696,20 +1696,20 @@ namespace Axiom
         {
             if (!string.IsNullOrWhiteSpace(path))
             {
-                // Not Valid
-                string invalidChars = new string(Path.GetInvalidPathChars());
-                Regex regex = new Regex("[" + Regex.Escape(invalidChars) + "]");
-
-                if (regex.IsMatch(path)) { return false; };
+                //非法路径
+                if (path.IndexOfAny(Path.GetInvalidPathChars()) >= 0)
+                {
+                    return false;
+                }
             }
 
-            // Empty
+            //空路径
             else
             {
                 return false;
             }
 
-            // Is Valid
+            //有效路径
             return true;
         }
 

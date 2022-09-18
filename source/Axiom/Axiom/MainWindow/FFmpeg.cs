@@ -138,7 +138,7 @@ namespace Axiom
                 MessageBox.Show("输入文件路径不存在或不正确！", "路径错误", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
-            if (string.IsNullOrEmpty(VM.MainView.Output_Text) || !File.Exists(VM.MainView.Output_Text))
+            if (!IsValidPath(VM.MainView.Output_Text))
             {
                 MessageBox.Show("输出文件路径不存在或不正确！", "路径错误", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
