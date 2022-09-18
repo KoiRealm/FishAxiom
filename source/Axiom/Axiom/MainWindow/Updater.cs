@@ -91,8 +91,8 @@ namespace Axiom
                     }
                     catch
                     {
-                        MessageBox.Show("Error reading version.",
-                                        "Error",
+                        MessageBox.Show("读取版本号时发生了错误.",
+                                        "错误",
                                         MessageBoxButton.OK,
                                         MessageBoxImage.Error);
 
@@ -111,8 +111,8 @@ namespace Axiom
                     {
                         // Yes/No Dialog Confirmation
                         //
-                        MessageBoxResult result = MessageBox.Show("v" + Convert.ToString(latestVersion) + "-" + latestBuildPhase + "\n\nDownload Update?",
-                                                                  "Update Available",
+                        MessageBoxResult result = MessageBox.Show("v" + Convert.ToString(latestVersion) + "-" + latestBuildPhase + "\n\n是否要下载更新?",
+                                                                  "有更新可用",
                                                                   MessageBoxButton.YesNo
                                                                   );
                         switch (result)
@@ -148,8 +148,8 @@ namespace Axiom
                     //
                     else if (latestVersion <= currentVersion)
                     {
-                        MessageBox.Show("This version is up to date.",
-                                        "Notice",
+                        MessageBox.Show("当前已经是最新版本.",
+                                        "提示",
                                         MessageBoxButton.OK,
                                         MessageBoxImage.Information);
 

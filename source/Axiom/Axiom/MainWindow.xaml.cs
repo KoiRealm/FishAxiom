@@ -230,7 +230,7 @@ namespace Axiom
             // -------------------------
             // Title + Version
             // -------------------------
-            VM.MainView.TitleVersion = "Axiom ~ FFmpeg UI (" + Convert.ToString(currentVersion) + "-" + currentBuildPhase + ")";
+            VM.MainView.TitleVersion = "FishAxiom (" + Convert.ToString(currentVersion) + "-" + currentBuildPhase + ")";
 
             // -------------------------
             // Tool Tips
@@ -318,7 +318,7 @@ namespace Axiom
             // -----------------------------------------------------------------  
             // Log Console Message /////////
             Log.logParagraph.Inlines.Add(new LineBreak());
-            Log.logParagraph.Inlines.Add(new Bold(new Run("Loading Saved Settings...")) { Foreground = Log.ConsoleAction });
+            Log.logParagraph.Inlines.Add(new Bold(new Run("正在加载保存的配置...")) { Foreground = Log.ConsoleAction });
 
             // -------------------------
             // Prevent Loading Corrupt App.Config
@@ -396,7 +396,7 @@ namespace Axiom
                 // Log Console Message /////////
                 Log.logParagraph.Inlines.Add(new LineBreak());
                 Log.logParagraph.Inlines.Add(new LineBreak());
-                Log.logParagraph.Inlines.Add(new Bold(new Run("Config Location: ")) { Foreground = Log.ConsoleDefault });
+                Log.logParagraph.Inlines.Add(new Bold(new Run("配置路径: ")) { Foreground = Log.ConsoleDefault });
                 Log.logParagraph.Inlines.Add(new Run(Controls.Configure.confAppDataLocalFilePath) { Foreground = Log.ConsoleDefault });
             }
 
@@ -431,7 +431,7 @@ namespace Axiom
                 // Log Console Message /////////
                 Log.logParagraph.Inlines.Add(new LineBreak());
                 Log.logParagraph.Inlines.Add(new LineBreak());
-                Log.logParagraph.Inlines.Add(new Bold(new Run("Config Location: ")) { Foreground = Log.ConsoleDefault });
+                Log.logParagraph.Inlines.Add(new Bold(new Run("配置路径: ")) { Foreground = Log.ConsoleDefault });
                 Log.logParagraph.Inlines.Add(new Run(Controls.Configure.confAppDataRoamingFilePath) { Foreground = Log.ConsoleDefault });
             }
 
@@ -467,7 +467,7 @@ namespace Axiom
                 // Log Console Message /////////
                 Log.logParagraph.Inlines.Add(new LineBreak());
                 Log.logParagraph.Inlines.Add(new LineBreak());
-                Log.logParagraph.Inlines.Add(new Bold(new Run("Config Location: ")) { Foreground = Log.ConsoleDefault });
+                Log.logParagraph.Inlines.Add(new Bold(new Run("配置路径: ")) { Foreground = Log.ConsoleDefault });
                 Log.logParagraph.Inlines.Add(new Run(Controls.Configure.confAppRootFilePath) { Foreground = Log.ConsoleDefault });
             }
 
@@ -549,7 +549,7 @@ namespace Axiom
             // Log Console Message /////////
             Log.logParagraph.Inlines.Add(new LineBreak());
             Log.logParagraph.Inlines.Add(new LineBreak());
-            Log.logParagraph.Inlines.Add(new Bold(new Run("Log Enabled: ")) { Foreground = Log.ConsoleDefault });
+            Log.logParagraph.Inlines.Add(new Bold(new Run("日志启用: ")) { Foreground = Log.ConsoleDefault });
             Log.logParagraph.Inlines.Add(new Run(Convert.ToString(VM.ConfigureView.LogCheckBox_IsChecked.ToString())) { Foreground = Log.ConsoleDefault });
 
             // -------------------------
@@ -557,7 +557,7 @@ namespace Axiom
             // -------------------------
             // Log Console Message /////////
             Log.logParagraph.Inlines.Add(new LineBreak());
-            Log.logParagraph.Inlines.Add(new Bold(new Run("Log Path: ")) { Foreground = Log.ConsoleDefault });
+            Log.logParagraph.Inlines.Add(new Bold(new Run("日志路径: ")) { Foreground = Log.ConsoleDefault });
             Log.logParagraph.Inlines.Add(new Run(VM.ConfigureView.LogPath_Text) { Foreground = Log.ConsoleDefault });
 
             // -------------------------
@@ -566,7 +566,7 @@ namespace Axiom
             // Log Console Message /////////
             Log.logParagraph.Inlines.Add(new LineBreak());
             Log.logParagraph.Inlines.Add(new LineBreak());
-            Log.logParagraph.Inlines.Add(new Bold(new Run("Using CPU Threads: ")) { Foreground = Log.ConsoleDefault });
+            Log.logParagraph.Inlines.Add(new Bold(new Run("CPU线程数: ")) { Foreground = Log.ConsoleDefault });
             Log.logParagraph.Inlines.Add(new Run(VM.ConfigureView.Threads_SelectedItem) { Foreground = Log.ConsoleDefault });
 
             // -----------------------------------------------------------------
@@ -1896,8 +1896,8 @@ namespace Axiom
                     else
                     {
                         // lock
-                        MessageBox.Show("Cannot locate FFprobe Path in User Defined Path.",
-                                        "Error",
+                        MessageBox.Show("无法在用户指定的路径中发现FFprobe的主程序.",
+                                        "错误",
                                         MessageBoxButton.OK,
                                         MessageBoxImage.Warning);
 
@@ -2535,7 +2535,7 @@ namespace Axiom
             // Log Console Message /////////
             Log.logParagraph.Inlines.Add(new LineBreak());
             Log.logParagraph.Inlines.Add(new LineBreak());
-            Log.logParagraph.Inlines.Add(new Bold(new Run("System Info:")) { Foreground = Log.ConsoleAction });
+            Log.logParagraph.Inlines.Add(new Bold(new Run("系统信息:")) { Foreground = Log.ConsoleAction });
             Log.logParagraph.Inlines.Add(new LineBreak());
 
             // -------------------------
@@ -2575,9 +2575,9 @@ namespace Axiom
                 cpu.Dispose();
 
                 // Max Threads
-                foreach (var item in new System.Management.ManagementObjectSearcher("Select NumberOfLogicalProcessors FROM Win32_ComputerSystem").Get())
+                foreach (var item in new ManagementObjectSearcher("Select NumberOfLogicalProcessors FROM Win32_ComputerSystem").Get())
                 {
-                    Controls.Configure.maxthreads = String.Format("{0}", item["NumberOfLogicalProcessors"]);
+                    Controls.Configure.maxthreads = string.Format("{0}", item["NumberOfLogicalProcessors"]);
                 }
             }
             catch
@@ -2959,7 +2959,7 @@ namespace Axiom
         private void btbWebsite_Click(object sender, RoutedEventArgs e)
         {
             // Open Axiom Website URL in Default Browser
-            Process.Start("https://axiomui.github.io");
+            Process.Start("https://github.com/KoiRealm/FishAxiom");
 
         }
 
@@ -3133,10 +3133,10 @@ namespace Axiom
             {
                 Log.logParagraph.Inlines.Add(new LineBreak());
                 Log.logParagraph.Inlines.Add(new LineBreak());
-                Log.logParagraph.Inlines.Add(new Bold(new Run("Notice: Output Log has not been created yet.")) { Foreground = Log.ConsoleWarning });
+                Log.logParagraph.Inlines.Add(new Bold(new Run("提示: 输出日志尚未创建.")) { Foreground = Log.ConsoleWarning });
 
-                MessageBox.Show("Output Log has not been created yet.",
-                                "Notice",
+                MessageBox.Show("输出日志尚未创建.",
+                                "提示",
                                 MessageBoxButton.OK,
                                 MessageBoxImage.Information);
             }
@@ -3239,10 +3239,10 @@ namespace Axiom
             {
                 Log.logParagraph.Inlines.Add(new LineBreak());
                 Log.logParagraph.Inlines.Add(new LineBreak());
-                Log.logParagraph.Inlines.Add(new Bold(new Run("Notice: File does not yet exist.")) { Foreground = Log.ConsoleWarning });
+                Log.logParagraph.Inlines.Add(new Bold(new Run("提示: 文件不存在.")) { Foreground = Log.ConsoleWarning });
 
-                MessageBox.Show("File does not yet exist.",
-                                "Notice",
+                MessageBox.Show("文件不存在.",
+                                "提示",
                                 MessageBoxButton.OK,
                                 MessageBoxImage.Warning);
             }
@@ -3335,7 +3335,7 @@ namespace Axiom
             catch (IOException ex)
             {
                 MessageBox.Show(ex.ToString(),
-                                "Error",
+                                "错误",
                                 MessageBoxButton.OK,
                                 MessageBoxImage.Error);
             }
@@ -3362,7 +3362,7 @@ namespace Axiom
             catch (IOException ex)
             {
                 MessageBox.Show(ex.ToString(),
-                                "Error",
+                                "错误",
                                 MessageBoxButton.OK,
                                 MessageBoxImage.Error);
             }
