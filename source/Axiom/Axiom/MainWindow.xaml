@@ -365,8 +365,8 @@
                     Width="70"
                     Height="22"
                     Cursor="Hand"
-                    Click="btnInput_Click">
-                <TextBlock Text="Input"
+                    Click="btnInput_Click" FontFamily="Microsoft YaHei">
+                <TextBlock Text="添加文件"
                            Margin="0,-2,0,0" />
             </Button>
 
@@ -441,7 +441,7 @@
                     Cursor="Hand"
                     Click="btnOutput_Click"
                     Margin="0,29,0,0">
-                <TextBlock Text="Output"
+                <TextBlock Text="输出文件夹"
                            Margin="0,-2,0,0" />
             </Button>
             <!-- Output Textbox-->
@@ -516,7 +516,7 @@
                     Background="Transparent">
 
             <!-- Format Tab -->
-            <TabItem Header="Format"
+            <TabItem Header="格式"
                      Width="85"
                      DataContext="{Binding FormatView}"
                      Style="{DynamicResource TabItemStyle}">
@@ -1083,7 +1083,7 @@
             </TabItem>
 
             <!-- Video Tab -->
-            <TabItem Header="Video"
+            <TabItem Header="视频"
                      Width="86"
                      Style="{DynamicResource TabItemStyle}">
 
@@ -4127,7 +4127,7 @@
             </TabItem>
 
             <!-- Audio Tab -->
-            <TabItem Header="Audio"
+            <TabItem Header="音频"
                      Width="85"
                      DataContext="{Binding AudioView}"
                      Style="{DynamicResource TabItemStyle}">
@@ -4906,7 +4906,7 @@
             </TabItem>
 
             <!-- Subtitles Tab -->
-            <TabItem Header="Subtitles"
+            <TabItem Header="字幕"
                      Width="85"
                      DataContext="{Binding SubtitleView}"
                      Style="{DynamicResource TabItemStyle}">
@@ -5264,7 +5264,7 @@
             </TabItem>
 
             <!-- Filters Tab -->
-            <TabItem Header="Filters"
+            <TabItem Header="滤镜"
                      Width="86"
                      Style="{DynamicResource TabItemStyle}">
                 <Grid Background="Transparent">
@@ -6018,7 +6018,7 @@
             </TabItem>
 
             <!-- Settings Tab -->
-            <TabItem Header="Settings"
+            <TabItem Header="设置"
                      Width="85"
                      DataContext="{Binding ConfigureView}"
                      Style="{DynamicResource TabItemStyle}">
@@ -6051,7 +6051,7 @@
                                         Background="Transparent">
 
                                 <!-- Config Tab -->
-                                <TabItem Header="Config"
+                                <TabItem Header="配置"
                                          Width="72"
                                          Style="{DynamicResource TabItemStyle}">
 
@@ -6096,13 +6096,13 @@
 
                                             <!-- Location -->
                                             <Label Style="{DynamicResource LabelStyle}"
-                                       Content="Location"
+                                       Content="配置路径"
                                        HorizontalAlignment="Left"
                                        VerticalAlignment="Top"
                                        Height="26"
                                        ToolTipService.InitialShowDelay="250"
                                        ToolTipService.ShowOnDisabled="True"
-                                       ToolTip="Your config file will be moved to this location."
+                                       ToolTip="配置文件的指定到此路径"
                                        Grid.Column="1"
                                        Grid.Row="0"
                                        Width="58"
@@ -6124,7 +6124,7 @@
                                           Margin="10,2,0,0"
                                           ToolTipService.InitialShowDelay="500"
                                           ToolTipService.ShowOnDisabled="True"
-                                          ToolTip="Your config file will be moved to this location." />
+                                          ToolTip="你的配置文件将被指定到此路径" />
                                             <Button x:Name="btnConfigPath"
                                         HorizontalAlignment="Left"
                                         Margin="122,1,0,0"
@@ -6150,7 +6150,7 @@
 
                                             <!-- Custom Presets Path TextBox -->
                                             <Label Style="{DynamicResource LabelStyle}"
-                                       Content="Presets"
+                                       Content="预设路径"
                                        HorizontalAlignment="Left"
                                        VerticalAlignment="Top"
                                        Height="26"
@@ -6479,13 +6479,13 @@
                                             <!-- Theme -->
                                             <Label x:Name="labelTheme"
                                        Style="{DynamicResource LabelStyle}"
-                                       Content="Theme"
+                                       Content="主题"
                                        HorizontalAlignment="Left"
                                        VerticalAlignment="Top"
                                        Height="26"
                                        ToolTipService.InitialShowDelay="500"
                                        ToolTipService.ShowOnDisabled="True"
-                                       ToolTip="Program Theme"
+                                       ToolTip="软件主题"
                                        Grid.Row="0"
                                        Grid.Column="1"
                                        Width="52" />
@@ -6507,13 +6507,13 @@
 
                                             <!-- Check for Updates -->
                                             <Label Style="{DynamicResource LabelStyle}"
-                                       Content="Updates"
+                                       Content="更新"
                                        HorizontalAlignment="Left"
                                        VerticalAlignment="Top"
                                        Height="26"
                                        ToolTipService.InitialShowDelay="500"
                                        ToolTipService.ShowOnDisabled="True"
-                                       ToolTip="Automatically check for updates at startup."
+                                       ToolTip="启动时检查更新"
                                        Grid.Row="1"
                                        Grid.Column="1"
                                        Width="58" />
@@ -6526,7 +6526,7 @@
                                               VerticalAlignment="Top"
                                               ToolTipService.InitialShowDelay="500"
                                               ToolTipService.ShowOnDisabled="True"
-                                              ToolTip="Automatically check for updates at startup."
+                                              ToolTip="在应用启动时自动检查更新"
                                               Width="55"
                                               Height="22"
                                               Style="{DynamicResource ToggleButtonStyle}"
@@ -6541,7 +6541,7 @@
                                             </ToggleButton>
 
                                             <Label Style="{DynamicResource LabelStyle}"
-                                       Content="Auto-Check"
+                                       Content="自动检查"
                                        HorizontalAlignment="Left"
                                        VerticalAlignment="Top"
                                        Height="26"
@@ -6559,7 +6559,7 @@
                                         Height="23"
                                         ToolTipService.InitialShowDelay="500"
                                         ToolTipService.ShowOnDisabled="True"
-                                        ToolTip="Delete config file and reset settings."
+                                        ToolTip="删除配置文件并重置设置"
                                         Cursor="Hand"
                                         Click="btnResetConfig_Click"
                                         Style="{DynamicResource ButtonSmallStyle}"
@@ -6567,13 +6567,13 @@
                                         Grid.Row="2"
                                         Margin="72,2,0,0">
                                                 <TextBlock Style="{DynamicResource TextBlockStyle}"
-                                               Text="Reset"
+                                               Text="重设"
                                                Margin="0,-1,0,0" />
                                             </Button>
 
                                             <!-- Settings Default -->
                                             <Label Style="{DynamicResource LabelStyle}"
-                                       Content="Settings"
+                                       Content="设置"
                                        HorizontalAlignment="Left"
                                        VerticalAlignment="Top"
                                        Height="26"
@@ -6588,7 +6588,7 @@
                                         Height="23"
                                         ToolTipService.InitialShowDelay="500"
                                         ToolTipService.ShowOnDisabled="True"
-                                        ToolTip="Set all settings to default."
+                                        ToolTip="将所有设置恢复为默认"
                                         Cursor="Hand"
                                         Click="btnSettingsDefault_Click"
                                         Style="{DynamicResource ButtonSmallStyle}"
@@ -6596,7 +6596,7 @@
                                         Grid.Row="2"
                                         Margin="10,2,0,0">
                                                 <TextBlock Style="{DynamicResource TextBlockStyle}"
-                                               Text="Default"
+                                               Text="恢复默认"
                                                Margin="0,-1,0,0" />
                                             </Button>
                                         </Grid>
@@ -6604,7 +6604,7 @@
                                 </TabItem>
 
                                 <!-- File Tab -->
-                                <TabItem Header="File"
+                                <TabItem Header="文件"
                                          Width="72"
                                          Style="{DynamicResource TabItemStyle}">
 
@@ -7007,7 +7007,7 @@
                                 </TabItem>
 
                                 <!-- System Tab -->
-                                <TabItem Header="System"
+                                <TabItem Header="系统"
                                          Width="72"
                                          Style="{DynamicResource TabItemStyle}">
 
