@@ -458,6 +458,8 @@ namespace Analyze
                     // Frame Rate
                     // -------------------------
                     FFprobeParse.StartInfo.Arguments = arguments;
+                    //强制指定输出编码为UTF-8，防止因出现中文路径名等中文字符后出现乱码
+                    FFprobeParse.StartInfo.StandardOutputEncoding = System.Text.Encoding.UTF8;
                     FFprobeParse.Start();
                     //FFprobeParse.WaitForExit();
                     // Get Ouput Result
