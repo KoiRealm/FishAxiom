@@ -1366,7 +1366,7 @@ namespace Axiom
         private void tglUpdateAutoCheck_Checked(object sender, RoutedEventArgs e)
         {
             // Update Toggle Text
-            VM.ConfigureView.UpdateAutoCheck_Text = "On";
+            VM.ConfigureView.UpdateAutoCheck_Text = "开启";
         }
         /// <summary>
         /// Updates Auto Check - Unchecked
@@ -1374,7 +1374,7 @@ namespace Axiom
         private void tglUpdateAutoCheck_Unchecked(object sender, RoutedEventArgs e)
         {
             // Update Toggle Text
-            VM.ConfigureView.UpdateAutoCheck_Text = "Off";
+            VM.ConfigureView.UpdateAutoCheck_Text = "关闭";
         }
 
 
