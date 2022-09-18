@@ -277,13 +277,13 @@ namespace Axiom
                                   VM.AudioView.Audio_Codec_SelectedItem) == true
                 )
             {
-                VM.MainView.Convert_Text = "Download";
+                VM.MainView.Convert_Text = "下载";
             }
 
             // Change to Convert if User Defined Custom Settings
             else
             {
-                VM.MainView.Convert_Text = "Convert";
+                VM.MainView.Convert_Text = "转换";
             }
         }
 

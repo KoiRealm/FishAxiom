@@ -38,7 +38,7 @@
         Width="824"
         Height="464"
         Title="{Binding MainView.TitleVersion, Mode=OneWay}"
-        Style="{DynamicResource WindowStyle}">
+        Style="{DynamicResource WindowStyle}" WindowStartupLocation="CenterScreen">
 
     <Window.DataContext>
         <local:VM />
@@ -250,7 +250,7 @@
                 HorizontalAlignment="Left"
                 VerticalAlignment="Bottom"
                 Click="btnScriptSave_Click">
-            <TextBlock Text="Save"
+            <TextBlock Text="保存配置"
                        Margin="0,-2,0,0" />
         </Button>
 
@@ -264,7 +264,7 @@
                 HorizontalAlignment="Left"
                 VerticalAlignment="Bottom"
                 Click="btnScriptLoad_Click">
-            <TextBlock Text="Load"
+            <TextBlock Text="加载配置"
                        Margin="0,-2,0,0" />
         </Button>
 
@@ -278,7 +278,7 @@
                 HorizontalAlignment="Left"
                 VerticalAlignment="Bottom"
                 Click="btnScriptCopy_Click">
-            <TextBlock Text="Copy"
+            <TextBlock Text="复制配置"
                        Margin="0,-2,0,0" />
         </Button>
 
@@ -310,7 +310,7 @@
                 VerticalAlignment="Bottom"
                 Click="btnScriptClear_Click">
             <TextBlock x:Name="txblScriptClear"
-                       Text="Clear"
+                       Text="清除"
                        Width="50"
                        Margin="0,-2,0,0"
                        TextAlignment="Center" />
@@ -346,7 +346,7 @@
                 ToolTipService.ShowOnDisabled="True"
                 ToolTip="Run the customized Script."
                 Click="btnScriptRun_Click">
-            <TextBlock Text="Run"
+            <TextBlock Text="运行脚本"
                        Margin="0,-2,0,0" />
         </Button>
 
@@ -441,7 +441,7 @@
                     Cursor="Hand"
                     Click="btnOutput_Click"
                     Margin="0,29,0,0">
-                <TextBlock Text="输出文件夹"
+                <TextBlock Text="输出路径"
                            Margin="0,-2,0,0" />
             </Button>
             <!-- Output Textbox-->

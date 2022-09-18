@@ -89,8 +89,8 @@ namespace ViewModel
             AutoSortScript_IsChecked = true;
 
             BatchExtension_Text = "extension";
-            Sort_Text = "Sort";
-            Convert_Text = "Convert";
+            Sort_Text = "排序";
+            Convert_Text = "转换";
         }
 
 
