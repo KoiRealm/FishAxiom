@@ -20,12 +20,11 @@ along with this program.If not, see <http://www.gnu.org/licenses/>.
 ---------------------------------------------------------------------- */
 
 using System;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Documents;
-using System.Linq;
 using ViewModel;
-using System.IO;
 // Disable XML Comment warnings
 #pragma warning disable 1591
 #pragma warning disable 1587
@@ -136,8 +135,7 @@ namespace Axiom
             //进行文件路径合法性检查
             if (string.IsNullOrEmpty(VM.MainView.Input_Text) || !File.Exists(VM.MainView.Input_Text))
             {
-                MessageBox.Show("输入文件路径不存在或不正确！", "路径错误", MessageBoxButton.OK, MessageBoxImage.MessageBox.Show("输出文件路径不存在或不正确！", "路径错误", MessageBoxButton.OK, MessageBoxImage.Warning);
-);
+                MessageBox.Show("输入文件路径不存在或不正确！", "路径错误", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
             if (string.IsNullOrEmpty(VM.MainView.Output_Text) || !File.Exists(VM.MainView.Input_Text))
