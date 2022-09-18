@@ -575,7 +575,7 @@ namespace Axiom
                                                  .ToList();
 
                                 // Find ffmpeg.exe in files list
-                                if (files != null && files.Any())
+                                if (files != null && files.Count() > 0)
                                 {
                                     foreach (string file in files)
                                     {
@@ -590,11 +590,7 @@ namespace Axiom
                         }
                     }
 
-                    //防止在Path中没有找到用户安装的FFmpeg
-                    if (!string.IsNullOrEmpty(exePath))
-                    {
-                        ffmpegPath = Path.GetDirectoryName(exePath).TrimEnd('\\') + @"\";
-                    }
+                    ffmpegPath = Path.GetDirectoryName(exePath).TrimEnd('\\') + @"\";
                     //MessageBox.Show(exePath); //debug
                 }
             }
@@ -698,11 +694,7 @@ namespace Axiom
                         }
                     }
 
-                    //防止在Path中没有找到用户安装的FFmpeg
-                    if (!string.IsNullOrEmpty(exePath))
-                    {
-                        ffprobePath = Path.GetDirectoryName(exePath).TrimEnd('\\') + @"\";
-                    }
+                    ffprobePath = Path.GetDirectoryName(exePath).TrimEnd('\\') + @"\";
                 }
             }
 
@@ -805,11 +797,7 @@ namespace Axiom
                         }
                     }
 
-                    //防止在Path中没有找到用户安装的FFmpeg
-                    if (!string.IsNullOrEmpty(exePath))
-                    {
-                        ffplayPath = Path.GetDirectoryName(exePath).TrimEnd('\\') + @"\";
-                    }
+                    ffplayPath = Path.GetDirectoryName(exePath).TrimEnd('\\') + @"\";
                 }
             }
 
@@ -912,11 +900,7 @@ namespace Axiom
                         }
                     }
 
-                    //防止在Path中没有找到用户安装的youtube-dl
-                    if (!string.IsNullOrEmpty(exePath))
-                    {
-                        youtubedlPath = Path.GetDirectoryName(exePath).TrimEnd('\\') + @"\";
-                    }
+                    youtubedlPath = Path.GetDirectoryName(exePath).TrimEnd('\\') + @"\";
                 }
             }
 
@@ -1382,7 +1366,7 @@ namespace Axiom
         private void tglUpdateAutoCheck_Checked(object sender, RoutedEventArgs e)
         {
             // Update Toggle Text
-            VM.ConfigureView.UpdateAutoCheck_Text = "开启";
+            VM.ConfigureView.UpdateAutoCheck_Text = "On";
         }
         /// <summary>
         /// Updates Auto Check - Unchecked
@@ -1390,7 +1374,7 @@ namespace Axiom
         private void tglUpdateAutoCheck_Unchecked(object sender, RoutedEventArgs e)
         {
             // Update Toggle Text
-            VM.ConfigureView.UpdateAutoCheck_Text = "关闭";
+            VM.ConfigureView.UpdateAutoCheck_Text = "Off";
         }
 
 

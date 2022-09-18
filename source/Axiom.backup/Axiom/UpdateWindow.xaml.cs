@@ -120,9 +120,9 @@ namespace Axiom
         }
 
 
-        /// <summary>
-        /// Axiom自我更新
-        /// </summary>
+        // -------------------------
+        // Axiom Self-Update Download
+        // -------------------------
         public void StartDownload()
         {
             // Start New Thread
@@ -144,7 +144,7 @@ namespace Axiom
                 Uri url = new Uri("https://github.com/MattMcManis/Axiom/releases/download/" + "v" + Convert.ToString(MainWindow.latestVersion) + "-" + MainWindow.latestBuildPhase + "/Axiom.zip"); // v1.0.0.0-alpha/Axiom.zip
 
                 // Delete old Axiom.zip file if it was left in %temp%
-                if (File.Exists(Path.Combine(MainWindow.tempDir, "Axiom.zip")))
+                if (File.Exists(Path.Combine(MainWindow.tempDir,"Axiom.zip")))
                 {
                     try
                     {
