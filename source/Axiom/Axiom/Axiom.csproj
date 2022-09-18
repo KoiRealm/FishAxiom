@@ -39,12 +39,6 @@
     </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="PresentationFramework.Aero" />
-    <Reference Include="PresentationFramework.Aero2" />
-    <Reference Include="System.Net" />
-    <Reference Include="System.Windows" />
-  </ItemGroup>
-  <ItemGroup>
     <None Update="app.manifest">
       <SubType>Designer</SubType>
     </None>

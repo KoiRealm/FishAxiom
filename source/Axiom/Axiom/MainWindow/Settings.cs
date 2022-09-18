@@ -575,7 +575,7 @@ namespace Axiom
                                                  .ToList();
 
                                 // Find ffmpeg.exe in files list
-                                if (files != null && files.Count() > 0)
+                                if (files != null && files.Any())
                                 {
                                     foreach (string file in files)
                                     {
@@ -590,7 +590,11 @@ namespace Axiom
                         }
                     }
 
-                    ffmpegPath = Path.GetDirectoryName(exePath).TrimEnd('\\') + @"\";
+                    //防止在Path中没有找到用户安装的FFmpeg
+                    if (!string.IsNullOrEmpty(exePath))
+                    {
+                        ffmpegPath = Path.GetDirectoryName(exePath).TrimEnd('\\') + @"\";
+                    }
                     //MessageBox.Show(exePath); //debug
                 }
             }
@@ -694,7 +698,11 @@ namespace Axiom
                         }
                     }
 
-                    ffprobePath = Path.GetDirectoryName(exePath).TrimEnd('\\') + @"\";
+                    //防止在Path中没有找到用户安装的FFmpeg
+                    if (!string.IsNullOrEmpty(exePath))
+                    {
+                        ffprobePath = Path.GetDirectoryName(exePath).TrimEnd('\\') + @"\";
+                    }
                 }
             }
 
@@ -797,7 +805,11 @@ namespace Axiom
                         }
                     }
 
-                    ffplayPath = Path.GetDirectoryName(exePath).TrimEnd('\\') + @"\";
+                    //防止在Path中没有找到用户安装的FFmpeg
+                    if (!string.IsNullOrEmpty(exePath))
+                    {
+                        ffplayPath = Path.GetDirectoryName(exePath).TrimEnd('\\') + @"\";
+                    }
                 }
             }
 
@@ -900,7 +912,11 @@ namespace Axiom
                         }
                     }
 
-                    youtubedlPath = Path.GetDirectoryName(exePath).TrimEnd('\\') + @"\";
+                    //防止在Path中没有找到用户安装的youtube-dl
+                    if (!string.IsNullOrEmpty(exePath))
+                    {
+                        youtubedlPath = Path.GetDirectoryName(exePath).TrimEnd('\\') + @"\";
+                    }
                 }
             }
 
