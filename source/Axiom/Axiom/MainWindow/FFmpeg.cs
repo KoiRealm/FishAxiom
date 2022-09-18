@@ -182,11 +182,11 @@ namespace Axiom
                     Log.logParagraph.Inlines.Add(new Bold(new Run(Convert.ToString(localDate))) { Foreground = Log.ConsoleAction });
                     Log.logParagraph.Inlines.Add(new LineBreak());
                     Log.logParagraph.Inlines.Add(new LineBreak());
-                    Log.logParagraph.Inlines.Add(new Bold(new Run("Initializing...")) { Foreground = Log.ConsoleTitle });
+                    Log.logParagraph.Inlines.Add(new Bold(new Run("加载中...")) { Foreground = Log.ConsoleTitle });
                 };
                 Log.LogActions.Add(Log.WriteAction);
 
-                VM.MainView.ScriptView_Text = "Generating...";
+                VM.MainView.ScriptView_Text = "生成脚本中...";
                 // Delay to make Generating... text visible
                 await Task.Delay(100);
 
@@ -209,7 +209,7 @@ namespace Axiom
                 {
                     Log.logParagraph.Inlines.Add(new LineBreak());
                     Log.logParagraph.Inlines.Add(new LineBreak());
-                    Log.logParagraph.Inlines.Add(new Bold(new Run("Converting...")) { Foreground = Log.ConsoleAction });
+                    Log.logParagraph.Inlines.Add(new Bold(new Run("转换中...")) { Foreground = Log.ConsoleAction });
                 };
                 Log.LogActions.Add(Log.WriteAction);
 
