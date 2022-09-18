@@ -136,12 +136,13 @@ namespace Axiom
             //进行文件路径合法性检查
             if (string.IsNullOrEmpty(VM.MainView.Input_Text) || !File.Exists(VM.MainView.Input_Text))
             {
-                MessageBox.Show("输入文件路径不正确！", "错误", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("输入文件路径不存在或不正确！", "路径错误", MessageBoxButton.OK, MessageBoxImage.MessageBox.Show("输出文件路径不存在或不正确！", "路径错误", MessageBoxButton.OK, MessageBoxImage.Warning);
+);
                 return;
             }
             if (string.IsNullOrEmpty(VM.MainView.Output_Text) || !File.Exists(VM.MainView.Input_Text))
             {
-                MessageBox.Show("输出文件路径不正确！", "错误", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("输出文件路径不存在或不正确！", "路径错误", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
             // -------------------------
