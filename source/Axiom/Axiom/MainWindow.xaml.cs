@@ -2954,13 +2954,14 @@ namespace Axiom
         }
 
         /// <summary>
-        /// Website Button
+        /// 官方网站按钮
         /// </summary>
         private void btbWebsite_Click(object sender, RoutedEventArgs e)
         {
-            // Open Axiom Website URL in Default Browser
-            Process.Start("https://github.com/KoiRealm/FishAxiom");
-
+            Process pWeb = new();
+            pWeb.StartInfo.UseShellExecute = true;
+            pWeb.StartInfo.FileName = "https://github.com/KoiRealm/FishAxiom";
+            pWeb.Start();
         }
 
         /// <summary>
