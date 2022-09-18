@@ -133,6 +133,17 @@ namespace Axiom
 
         public async void ConvertButtonAsync()
         {
+            //进行文件路径合法性检查
+            if (string.IsNullOrEmpty(VM.MainView.Input_Text) || !File.Exists(VM.MainView.Input_Text))
+            {
+                MessageBox.Show("输入文件路径不正确！", "错误", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            if (string.IsNullOrEmpty(VM.MainView.Output_Text) || !File.Exists(VM.MainView.Input_Text))
+            {
+                MessageBox.Show("输出文件路径不正确！", "错误", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
             // -------------------------
             // Check if Script has been Edited
             // -------------------------
