@@ -1229,8 +1229,7 @@ namespace Axiom
         {
             try
             {
-                DirectoryInfo di = new DirectoryInfo(path);
-                System.Security.AccessControl.DirectorySecurity ds = FileSystemAclExtensions.GetAccessControl(di);
+                System.Security.AccessControl.DirectorySecurity ds = Directory.GetAccessControl(path);
                 return true;
             }
             catch (UnauthorizedAccessException)
